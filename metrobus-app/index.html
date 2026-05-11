@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrobús CDMX</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css?v=3" />
+</head>
+<body>
+    <div id="app">
+        <aside id="sidebar">
+            <div class="sidebar-header">
+                <h1>🚌 Metrobús CDMX</h1>
+                <p class="subtitle">Líneas y Estaciones</p>
+            </div>
+
+            <div id="route-list" class="route-list"></div>
+
+            <div id="route-detail" class="route-detail hidden">
+                <button id="back-btn" class="back-btn">← Todas las líneas</button>
+                <div id="route-info"></div>
+                <div id="trip-selector"></div>
+                <div id="stop-list" class="stop-list"></div>
+            </div>
+        </aside>
+
+        <main id="map-container">
+            <div id="map"></div>
+            <div id="loading-overlay">
+                <div class="spinner"></div>
+                <p style="color:#333;font-weight:600;">Cargando datos GTFS...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js?v=3"></script>
+</body>
+</html>
